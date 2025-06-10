@@ -1,0 +1,190 @@
+{
+  "movies": [
+    {
+      "id": "68404ef474dd7d060c07efda",
+      "title": "Godzilla x Kong: The New Empire",
+      "description": "Hai titan hùng mạnh nhất thế giới là Godzilla và Kong phải hợp tác với nhau để chống lại một mối đe dọa ẩn giấu chưa được khám phá.",
+      "duration": 115,
+      "genre": ["Hành động", "Phiêu lưu", "Khoa học viễn tưởng"],
+      "releaseDate": "2024-03-27",
+      "poster": "/images/movies/godzilla-kong.jpg",
+      "trailer": "https://www.youtube.com/watch?v=0U3vQu0BR5g"
+    }
+  ],
+  "cinemas": [
+    {
+      "id": "CGV-LM81",
+      "name": "CGV Vincom Center Landmark 81",
+      "address": "Landmark 81, 720A Điện Biên Phủ, Phường 22, Bình Thạnh, TP.HCM",
+      "image": "https://www.cgv.vn/media/site/cache/1/980x415/b58515f018eb873dafa430b6f9ae0c1e/b/a/banner_2_1.jpg",
+      "description": "Rạp chiếu phim hiện đại bậc nhất tại tòa nhà cao nhất Việt Nam",
+      "facilities": [
+        "IMAX",
+        "4DX",
+        "Gold Class",
+        "Screen X"
+      ],
+      "halls": [
+        {
+          "id": "HALL-A",
+          "name": "Hall A",
+          "type": "2D",
+          "capacity": 100,
+          "seatMap": {
+            "rows": ["A", "B", "C", "D", "E", "F", "G"],
+            "columns": 10,
+            "vipRows": ["E", "F", "G"],
+            "seatTypes": {
+              "standard": {
+                "price": 120000,
+                "color": "#6B7280"
+              },
+              "vip": {
+                "price": 160000,
+                "color": "#EAB308"
+              }
+            }
+          }
+        },
+        {
+          "id": "HALL-B",
+          "name": "Hall B",
+          "type": "IMAX",
+          "capacity": 80,
+          "seatMap": {
+            "rows": ["A", "B", "C", "D", "E", "F", "G"],
+            "columns": 10,
+            "vipRows": ["D", "E", "F"],
+            "seatTypes": {
+              "standard": {
+                "price": 150000,
+                "color": "#6B7280"
+              },
+              "vip": {
+                "price": 200000,
+                "color": "#EAB308"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CGV-CM",
+      "name": "CGV Crescent Mall",
+      "address": "Lầu 5, Crescent Mall, 101 Tôn Dật Tiên, Phú Mỹ Hưng, Q.7, TP.HCM",
+      "image": "https://www.cgv.vn/media/site/cache/1/980x415/b58515f018eb873dafa430b6f9ae0c1e/c/g/cgv-crescent-mall.jpg",
+      "description": "Rạp chiếu phim cao cấp tại khu đô thị Phú Mỹ Hưng",
+      "facilities": [
+        "IMAX",
+        "Gold Class",
+        "Sweetbox"
+      ],
+      "halls": [
+        {
+          "id": "HALL-A",
+          "name": "Hall A",
+          "type": "2D",
+          "capacity": 100,
+          "seatMap": {
+            "rows": ["A", "B", "C", "D", "E", "F", "G"],
+            "columns": 10,
+            "vipRows": ["E", "F", "G"],
+            "seatTypes": {
+              "standard": {
+                "price": 120000,
+                "color": "#6B7280"
+              },
+              "vip": {
+                "price": 160000,
+                "color": "#EAB308"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "showtimes": [
+    {
+      "id": "ST-GODZILLA-LM81-20240606-1030",
+      "movieId": "68404ef474dd7d060c07efda",
+      "cinema": "CGV-LM81",
+      "hall": "HALL-A",
+      "date": "2024-06-06",
+      "time": "10:30",
+      "seats": [
+        {
+          "row": "A",
+          "seats": [
+            {"number": 1, "status": "available", "type": "standard", "price": 120000},
+            {"number": 2, "status": "available", "type": "standard", "price": 120000},
+            {"number": 3, "status": "occupied", "type": "standard", "price": 120000},
+            {"number": 4, "status": "available", "type": "standard", "price": 120000},
+            {"number": 5, "status": "available", "type": "standard", "price": 120000},
+            {"number": 6, "status": "available", "type": "standard", "price": 120000},
+            {"number": 7, "status": "available", "type": "standard", "price": 120000},
+            {"number": 8, "status": "occupied", "type": "standard", "price": 120000},
+            {"number": 9, "status": "available", "type": "standard", "price": 120000},
+            {"number": 10, "status": "available", "type": "standard", "price": 120000}
+          ]
+        },
+        {
+          "row": "B",
+          "seats": [
+            {"number": 1, "status": "available", "type": "standard", "price": 120000},
+            {"number": 2, "status": "available", "type": "standard", "price": 120000},
+            {"number": 3, "status": "available", "type": "standard", "price": 120000},
+            {"number": 4, "status": "available", "type": "standard", "price": 120000},
+            {"number": 5, "status": "occupied", "type": "standard", "price": 120000},
+            {"number": 6, "status": "occupied", "type": "standard", "price": 120000},
+            {"number": 7, "status": "available", "type": "standard", "price": 120000},
+            {"number": 8, "status": "available", "type": "standard", "price": 120000},
+            {"number": 9, "status": "available", "type": "standard", "price": 120000},
+            {"number": 10, "status": "available", "type": "standard", "price": 120000}
+          ]
+        },
+        {
+          "row": "E",
+          "seats": [
+            {"number": 1, "status": "available", "type": "vip", "price": 160000},
+            {"number": 2, "status": "available", "type": "vip", "price": 160000},
+            {"number": 3, "status": "available", "type": "vip", "price": 160000},
+            {"number": 4, "status": "occupied", "type": "vip", "price": 160000},
+            {"number": 5, "status": "occupied", "type": "vip", "price": 160000},
+            {"number": 6, "status": "available", "type": "vip", "price": 160000},
+            {"number": 7, "status": "available", "type": "vip", "price": 160000},
+            {"number": 8, "status": "available", "type": "vip", "price": 160000},
+            {"number": 9, "status": "available", "type": "vip", "price": 160000},
+            {"number": 10, "status": "available", "type": "vip", "price": 160000}
+          ]
+        }
+      ]
+    }
+  ],
+  "seatStatus": {
+    "available": {
+      "color": "#22C55E",
+      "label": "Ghế trống"
+    },
+    "occupied": {
+      "color": "#EF4444",
+      "label": "Đã đặt"
+    },
+    "selected": {
+      "color": "#3B82F6",
+      "label": "Đang chọn"
+    },
+    "disabled": {
+      "color": "#9CA3AF",
+      "label": "Không khả dụng"
+    }
+  },
+  "bookingConfig": {
+    "maxSeatsPerBooking": 8,
+    "timeoutMinutes": 5,
+    "cancellationPolicy": {
+      "allowedBefore": 24
+    }
+  }
+} 
