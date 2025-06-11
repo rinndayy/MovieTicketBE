@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
 const bookingSchema = new mongoose.Schema({
-  userId: {
+  userId: { // Changed from user to userId
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
+    ref: 'User ',
     required: true
   },
   showtimeId: {
@@ -66,4 +66,4 @@ bookingSchema.pre('save', function(next) {
 
 const Booking = mongoose.model('Booking', bookingSchema);
 
-module.exports = Booking; 
+module.exports = Booking;
