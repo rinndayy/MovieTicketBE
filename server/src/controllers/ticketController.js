@@ -74,30 +74,12 @@ exports.createTicket = async (req, res) => {
       }
     );
 
-    // Send confirmation email
-    try {
-      await emailjs.send(
-        process.env.EMAILJS_SERVICE_ID,
-        process.env.EMAILJS_TEMPLATE_ID,
-        {
-          to_email: req.user.email,
-          to_name: req.user.fullName,
-          movie_title: movieTitle,
-          cinema_name: cinema,
-          hall_name: hall,
-          show_date: new Date(date).toLocaleDateString(),
-          show_time: time,
-          seats: seats.join(', '),
-          total_amount: new Intl.NumberFormat('vi-VN', {
-            style: 'currency',
-            currency: 'VND'
-          }).format(totalAmount),
-          booking_id: ticket._id.toString()
-        }
-      );
-    } catch (emailError) {
-      console.error('Failed to send confirmation email:', emailError);
-    }
+    // Bỏ qua việc gửi email xác nhận
+    // try {
+    //   await emailjs.send(...)
+    // } catch (emailError) {
+    //   console.error('Failed to send confirmation email:', emailError);
+    // }
 
     res.status(201).json({
       success: true,

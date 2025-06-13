@@ -18,10 +18,21 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI)
-  .then(() => console.log('Connected to MongoDB'))
-  .catch((err) => console.error('MongoDB connection error:', err));
+// Connect to MongoDB with options
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  retryWrites: true,
+  w: 'majority'
+})
+.then(() => {
+  console.log('MongoDB Connected Successfully');
+})
+.catch((err) => {
+  console.error('MongoDB connection error:', err.message);
+  // Không thoát process khi có lỗi kết nối
+  // process.exit(1);
+});
 
 // Routes
 app.use('/api/auth', authRoutes);
@@ -29,7 +40,7 @@ app.use('/api/movies', movieRoutes);
 app.use('/api/showtimes', showtimeRoutes);
 app.use('/api/bookings', bookingRoutes);
 
-// Error handling
+// Error handling middleware
 app.use(notFound);
 app.use(errorHandler);
 
