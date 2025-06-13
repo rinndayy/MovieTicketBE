@@ -57,7 +57,7 @@ const createMovie = async (req, res) => {
     releaseDate: req.body.releaseDate,
     poster: req.body.poster,
     trailer: req.body.trailer,
-    status: req.body.status
+    status: req.body.status || 'coming-soon'
   });
 
   try {
@@ -147,7 +147,7 @@ const updateShowtimes = async (req, res) => {
 // @access  Public
 const getNowShowing = async (req, res) => {
   try {
-    const movies = await Movie.find({ status: 'Now Showing' }).sort({ releaseDate: -1 });
+    const movies = await Movie.find({ status: 'now-playing' }).sort({ releaseDate: -1 });
     res.json(movies);
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -159,7 +159,7 @@ const getNowShowing = async (req, res) => {
 // @access  Public
 const getComingSoon = async (req, res) => {
   try {
-    const movies = await Movie.find({ status: 'Coming Soon' }).sort({ releaseDate: 1 });
+    const movies = await Movie.find({ status: 'coming-soon' }).sort({ releaseDate: 1 });
     res.json(movies);
   } catch (error) {
     res.status(500).json({ message: error.message });
